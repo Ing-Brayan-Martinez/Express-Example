@@ -8,13 +8,11 @@
     "rootDir": "./",
     "outDir": "./build",
     "strict": true,
+    "sourceMap": true,
     "importHelpers": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "moduleResolution": "Node",
-    "baseUrl": ".",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "./node_modules/@types",
     ]

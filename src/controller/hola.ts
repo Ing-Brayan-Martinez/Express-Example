@@ -13,3 +13,7 @@ export function getResult(): Optional<number> {
         .map(username => username === 'root' ? 1234 : 0)
         .filter(userId => userId === 1234);
 }
+
+export function sum(a: number, b: number): number {
+    return a + b;
+}
