@@ -1,6 +1,6 @@
 import Optional from "optional-js";
 
-export function hola(): string {
+export function getHola(): string {
     return 'hola';
 }
 
