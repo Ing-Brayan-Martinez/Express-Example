@@ -3,27 +3,21 @@
   "display": "Recommended",
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ES2022",
+    "module": "CommonJS",
     "rootDir": "./",
     "outDir": "./build",
     "strict": true,
     "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "resolveJsonModule": true,
     "typeRoots": [
       "./node_modules/@types",
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+    ]
   },
   "include": [
     "src/**/*"

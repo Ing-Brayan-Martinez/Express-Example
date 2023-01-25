@@ -1,8 +1,15 @@
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
-import {hola} from "@/controller/hola";
+import {getResult, hola} from "./controller/hola";
+import Optional from "optional-js";
 
 dotenv.config();
+
+const result: Optional<number> = getResult();
+
+if (result.isPresent()) {
+    console.log()
+}
 
 console.log(hola());
 
