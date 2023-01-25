@@ -12,12 +12,14 @@
     "lint": "eslint ./src --ext .ts,.tsx --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "connect-timeout": "^1.9.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "optional-js": "^2.3.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.4.0",
+    "@types/connect-timeout": "^0.0.36",
     "@types/express": "^4.17.16",
     "@types/node": "^18.11.18",
     "@types/supertest": "^2.0.12",
