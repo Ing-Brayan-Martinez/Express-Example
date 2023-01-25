@@ -13,7 +13,7 @@ if (result.isPresent()) {
 
 export const app: Express = express();
 
-const port: any =  process.env.PORT;
+const port = process.env.PORT;
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
