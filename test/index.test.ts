@@ -1,8 +1,16 @@
-import {describe, expect, test} from "@jest/globals";
-import {sum} from "../src/controller/hola";
+import {describe, test} from "@jest/globals";
+import {app} from "../src";
+import request from "supertest";
 
-describe('sum module', () => {
-    test('adds 1 + 2 to equal 3', () => {
-        expect(sum(1, 2)).toBe(3);
+describe('Express', () => {
+
+    test('GET /', async () => {
+
+        request(app)
+            .get('/')
+            .expect(200)
+            .end(function(err, res) {
+                if (err) throw err;
+            });
     });
 });

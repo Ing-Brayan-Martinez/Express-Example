@@ -1,6 +1,6 @@
-import express, { Express, Request, Response } from 'express';
+import express, {Express, Request, Response} from 'express';
 import dotenv from 'dotenv';
-import {getResult, hola} from "./controller/hola";
+import {getResult} from "./controller/hola";
 import Optional from "optional-js";
 
 dotenv.config();
@@ -11,9 +11,7 @@ if (result.isPresent()) {
     console.log()
 }
 
-console.log(hola());
-
-const app: Express = express();
+export const app: Express = express();
 
 const port: any =  process.env.PORT;
 

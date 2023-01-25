@@ -1,8 +1,13 @@
 import {describe, expect, test} from '@jest/globals';
-import {sum} from "../../src/controller/hola";
+import {getResult, sum} from "../../src/controller/hola";
 
-describe('sum module', () => {
-    test('adds 1 + 2 to equal 3', () => {
+describe('Hola', () => {
+
+    test('sum()', () => {
         expect(sum(1, 2)).toBe(3);
+    });
+
+    test('getResult()', () => {
+        expect(getResult().isPresent()).toBe(false);
     });
 });
