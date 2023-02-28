@@ -11,4 +11,15 @@ describe('Express', () => {
             .expect(200)
             .end(done);
     });
+
+    it('GET /error',  (done) => {
+
+        request(app)
+            .get('/error')
+            .expect(200)
+            .end((err, res) => {
+                console.log(res.body);
+                done();
+            });
+    });
 });

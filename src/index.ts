@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import {getResult} from "./controller/hola";
 import Optional from "optional-js";
 import timeout from 'connect-timeout';
+import {Logic} from "./controller/logic";
 
 
 dotenv.config();
@@ -21,6 +22,17 @@ app.use(timeout('8s'))
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
+});
+
+app.get('/error', (req: Request, res: Response) => {
+    const logic = new Logic();
+    logic.execute()
+        .then((data) => {
+            res.send({success: true, data});
+        })
+        .catch((err) => {
+            res.send({success: false, ...err});
+        });
 });
 
 app.listen(port, () => {
